@@ -1,1 +1,53 @@
-<p>navbar works!</p>
+<nav class="bg-white border-b border-gray-200 fixed w-full z-20 top-0 inset-s-0">
+  <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a routerLink="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <span class="self-center text-2xl font-semibold whitespace-nowrap text-indigo-600">Home</span>
+    </a>
+
+    <div class="flex md:order-2 space-x-3 md:space-x-2 rtl:space-x-reverse">
+      <a
+        routerLink="/login"
+        class="text-gray-800 hover:bg-gray-100 font-medium rounded-lg text-sm px-4 py-2 transition-colors"
+      >
+        Iniciar Sesión
+      </a>
+      <a
+        routerLink="/register"
+        class="text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-4 py-2 transition-all"
+      >
+        Registrarse
+      </a>
+    </div>
+
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+      id="navbar-sticky"
+    >
+      <ul
+        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+      >
+        <li>
+          <a
+            routerLink="/"
+            routerLinkActive="text-indigo-600"
+            [routerLinkActiveOptions]="{ exact: true }"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-indigo-600 md:p-0 transition-colors"
+          >
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a
+            routerLink="/dashboard"
+            routerLinkActive="text-indigo-600"
+            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-indigo-600 md:p-0 transition-colors"
+          >
+            Panel de Control
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="h-20"></div>
