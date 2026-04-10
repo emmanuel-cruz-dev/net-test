@@ -1,4 +1,12 @@
+# Databases
+*.db
+*.db-shm
+*.db-wal
+
 # Visual Studio
+appsettings.Development.json
+out/
+.vscode/
 .vs/
 *.suo
 *.user
@@ -8,3 +16,6 @@
 # Build results
 bin/
 obj/
+
+.DS_Store
+Thumbs.db
