@@ -1,5 +1,6 @@
-using UserManagerAPI.Data;
 using Microsoft.EntityFrameworkCore;
+using UserManagerAPI.Data;
+using UserManagerAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,8 @@ builder.Services.AddCors(options =>
                 .AllowAnyMethod();
         });
 });
+
+builder.Services.AddScoped<JwtService>();
 
 var app = builder.Build();
 
