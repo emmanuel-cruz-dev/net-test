@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using UserManagerAPI.Data;
 using UserManagerAPI.Models;
 
@@ -6,6 +7,7 @@ namespace UserManagerAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly AppDbContext _context;
